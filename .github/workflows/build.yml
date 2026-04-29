@@ -1,0 +1,30 @@
+name: Build CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-c-compiler:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gcc make libc-dev
+
+    - name: Compile C Backend
+      run: make
+
+    - name: Verify Binary Exists
+      run: |
+        if [ ! -f "tinylang_compiler" ]; then
+          echo "Build failed: binary not found!"
+          exit 1
+        fi
+        echo "Build successful!"
