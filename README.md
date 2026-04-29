@@ -1,5 +1,7 @@
 # TinyLang Web Compiler
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-pbl--tinylang.onrender.com-success?style=for-the-badge&logo=render)](https://pbl-tinylang.onrender.com/)
+
 A beautiful, web-based LL(1) compiler and grammar analysis tool for TinyLang.
 
 ## Features
