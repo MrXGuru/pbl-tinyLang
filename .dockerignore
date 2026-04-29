@@ -1,0 +1,16 @@
+.git
+.gitignore
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+tinylang_compiler
+tinylang_compiler.exe
+.DS_Store
+build.bat
+Makefile
+venv/
+env/
+.env
